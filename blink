@@ -1,0 +1,8 @@
+var j4 = require("johnny-five");
+var board = new j4.Board();
+var LEDPIN = 4;
+
+board.on("ready", function(){
+  var led = new j4.Led(LEDPIN);
+  led.strobe();
+});
